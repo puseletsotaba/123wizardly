@@ -1,0 +1,9 @@
+CREATE TABLE tasks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT,
+    completed BOOLEAN NOT NULL DEFAULT 0,
+    due_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    priority TEXT NOT NULL CHECK
+    (priority IN ('High','Medium','Low'))
+);
